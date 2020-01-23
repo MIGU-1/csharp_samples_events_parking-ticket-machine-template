@@ -17,7 +17,7 @@ namespace ParkingTicketMachine.Wpf
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            FastClock.Instance.Factor = 360;
+            FastClock.Instance.Factor = 3600;
             FastClock.Instance.IsRunning = true;
             FastClock.Instance.OneMinuteIsOver += Instance_OneMinuteIsOver;
             SlotMachineWindow slot1 = new SlotMachineWindow("LIMESSTRAßE", OnTicketReady) { Owner = this };
