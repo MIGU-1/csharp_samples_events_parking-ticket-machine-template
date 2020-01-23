@@ -6,7 +6,6 @@ namespace ParkingTicketMachine.Core
     public class FastClock
     {
         private static FastClock _instance;
-
         public static FastClock Instance
         {
             get
@@ -29,7 +28,6 @@ namespace ParkingTicketMachine.Core
         public event EventHandler<DateTime> OneMinuteIsOver;
 
         public DateTime StartTime { get; private set; }
-
         public DateTime Time
         {
             get { return _time; }
@@ -39,9 +37,7 @@ namespace ParkingTicketMachine.Core
                 StartTime = value;
             }
         }
-
         public int Factor { get; set; }
-
         public bool IsRunning
         {
             get { return _isRunning; }
@@ -69,7 +65,6 @@ namespace ParkingTicketMachine.Core
             Time = Time.AddMinutes(1);
             OnOneMinuteIsOver(Time);
         }
-
         protected virtual void OnOneMinuteIsOver(DateTime fastClockTime)
         {
             OneMinuteIsOver?.Invoke(this, fastClockTime);

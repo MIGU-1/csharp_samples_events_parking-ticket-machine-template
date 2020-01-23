@@ -8,7 +8,7 @@
         BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"
         xmlns:local="clr-namespace:ParkingTicketMachine.Wpf"
         mc:Ignorable="d"
-        Title="Parkticketverwaltung" Margin="3" Width="600" Height="500" Initialized="Window_Initialized" ResizeMode="NoResize">
+        Title="Parkticketverwaltung" Margin="3" Width="600" Height="500" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid Margin="3">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
